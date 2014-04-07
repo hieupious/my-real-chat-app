@@ -1,0 +1,22 @@
+
+{
+    "name" : "my-real-chat-app",
+    "main" : "server.js",
+    "author": "Hieu Pious",
+    "license": "MIT",
+    "dependencies" : {
+        "express" : "~3.4.4",
+        "ejs" : "~0.8.5",
+        "mongoose" : "~3.8.1",
+        "passport" : "~0.1.17",
+        "passport-local" : "~0.1.6",
+        "passport-facebook" : "~1.0.2",
+        "passport-twitter" : "~1.0.2",
+        "passport-google-oauth" : "~0.1.5",
+        "connect-flash" : "~0.1.1",
+        "bcrypt-nodejs" : "latest",
+        "underscore": "~1.5.2",
+        "gravatar": "~1.0.6",
+        "socket.io": "~0.9.16"
+    }
+}

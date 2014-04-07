@@ -1,0 +1,167 @@
+ <!-- message template -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>Private Chat Application</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="/css/framework7.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="/css/my-app.css">
+
+</head>
+<body>
+  <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <!-- Left panel -->
+    <div class="panel panel-left panel-cover">
+      <div class="content-block-title"><span class="fa fa-asterisk"></span> Setting</div>
+
+      <!-- <div class="content-block-title"><span class="fa fa-user"></span> Login</div> -->
+      <div class="list-block">
+        <ul>
+          <li><a href="/login" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Login</div>
+                </div>
+              </div></a></li>
+          <li><a href="/signup" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Signup</div>
+                </div>
+              </div></a></li>
+          <li><a href="/auth/facebook" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-fb"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Facebook</div>
+                </div>
+              </div></a></li>
+          <li><a href="/auth/google" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-google"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Google+</div>
+                </div>
+              </div></a></li>
+          <li><a href="/auth/twitter" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-twitter"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Twitter</div>
+                </div>
+              </div></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+          <div class="left"><a href="#" class="back link"><i class="icon icon-back-blue"></i><span>Back</span></a></div>
+
+            <div class="center sliding" id="navbar-title">Private Chat App</div>
+        <div class="right"><a href="#" class="open-panel link"><i class="icon icon-bars-blue"></i></a></div>
+
+
+  </div>
+</div>
+
+
+
+<div class="pages navbar-through">
+  <div data-page="messages" class="page no-toolbar toolbar-fixed">
+
+
+
+     <div class="toolbar">
+      <form class="ks-messages-form">
+        <div class="toolbar-inner">
+          <input type="text" placeholder="Message" class="ks-messages-input" id="message"/>
+          <a href="#" class="link ks-send-message" >Send</a>
+          <!-- <input type="submit" class="link ks-send-message" id="submit" value="SEND"/> -->
+        </div>
+      </form>
+    </div>
+    <div class="page-content messages-content">
+      <div class="messages">
+
+        <!-- <div class="invite-textfield">
+
+            <h2>Oops, there are no other people in this chat!</h2>
+            <h5>Invite a friend by sending them this URL</h5>
+
+            <div class="link">
+                <a title="Invite a friend" href="" id="link"></a>
+            </div>
+
+        </div>
+ -->
+        <!-- <div class="messages-date">Sunday, Feb 9, <span>12:58</span></div>
+        <div class="message message-sent">Hello</div>
+        <div class="message message-sent">How are you?</div>
+        <div class="message message-received">Hi</div>
+        <div class="message message-received">I am fine, thanks! And how are you?</div>
+        <div class="message message-sent">I am great!</div>
+        <div class="message message-sent">What do you think about my new logo?</div>
+        <div class="messages-date">Wednesday, Feb 12, <span>19:33</span></div>
+        <div class="message message-sent">Hey? Any thoughts about my new logo?</div>
+        <div class="messages-date">Thursday, Feb 13, <span>11:20</span></div>
+        <div class="message message-sent">Alo...</div>
+        <div class="message message-sent">Are you there?</div>
+        <div class="message message-received">Hi, i am here</div>
+        <div class="message message-received">Your logo is great</div>
+        <div class="message message-received">Leave me alone!</div>
+        <div class="message message-sent">:(</div>
+        <div class="message message-sent">Hey, look, cutest kitten ever!</div>
+        <div class="message message-sent message-pic"><img src="http://placekitten.com/g/300/400"/></div>
+        <div class="message message-received">Yep</div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <input type="hidden" id="chatroomid" value="<%= idchat %>">
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="/js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="/js/my-app.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../js/moment.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Path to chat js-->
+    <script type="text/javascript" src="/js/chat.js"></script>
+
+
+
+</body>
+</html>
+
+

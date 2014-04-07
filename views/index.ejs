@@ -1,0 +1,182 @@
+<!-- template/index.ejs -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>Private Chat Application</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="/css/framework7.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="/css/my-app.css">
+
+</head>
+<body>
+  <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <!-- Left panel -->
+    <div class="panel panel-left panel-cover">
+      <div class="content-block-title"><span class="fa fa-asterisk"></span> Setting</div>
+
+      <!-- <div class="content-block-title"><span class="fa fa-user"></span> Login</div> -->
+      <div class="list-block">
+        <ul>
+          <li><a href="/login" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Login</div>
+                </div>
+              </div></a></li>
+          <li><a href="/signup" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Signup</div>
+                </div>
+              </div></a></li>
+          <li><a href="/auth/facebook" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-fb"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Facebook</div>
+                </div>
+              </div></a></li>
+          <li><a href="/auth/google" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-google"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Google+</div>
+                </div>
+              </div></a></li>
+          <li><a href="/auth/twitter" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-twitter"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Twitter</div>
+                </div>
+              </div></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left"><a href="#" class="open-panel link"><i class="icon icon-bars-blue"></i></a></div>
+            <div class="center sliding" id="navbar-title">Private Chat App</div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+                <div class="container">
+                <div class="jumbotron text-center">
+                  <div class="banner-top">
+                  <img src="img/banner-top.jpg" alt="banner top" id="banner-top">
+                  <h2 id="chat">Talk in Private</h2>
+                  <p>Login or Register with:</p>
+                </div>
+                <div class="content-block">
+                <div class="row">
+                  <div class="col-50">
+                    <a href="/login" class="button "><span class="fa fa-user"></span> Login</a>
+                  </div>
+                  <div class="col-50">
+                    <a href="/signup" class="button "><span class="fa fa-user"></span> Sign Up</a>
+                  </div>
+                  <!-- <div class="col-20">
+                    <a href="/auth/facebook" class="button active"><span class="fa fa-facebook"></span> Facebook</a>
+                    <form action="/auth/facebook" method="POST">
+                      <button type="submit" class="button active"><span class="fa fa-facebook"></span> Facebook</button>
+                    </form>
+                  </div>
+                  <div class="col-20">
+                    <a href="/auth/google" class="button button-cancel"><span class="fa fa-google-plus"></span> Google+</a>
+                    <form action="/auth/google" method="POST">
+                      <button type="submit" class="button button-cancel"><span class="fa fa-google-plus"></span> Google+</button>
+                    </form>
+                  </div>
+                  <div class="col-20">
+                    <a href="/auth/twitter" class="button button-submit"><span class="fa fa-twitter"></span> Twitter</a>
+                    <form action="/auth/twitter" method="POST">
+                      <button type="submit" class="button button-submit"><span class="fa fa-twitter"></span> Twitter</button>
+                    </form>
+                  </div> -->
+                </div>
+                </div>
+
+                <div class="content-block">
+                <div class="row">
+                  <div class="col-33">
+                    <!-- <a href="/auth/facebook" class="button active"><span class="fa fa-facebook"></span> Facebook</a> -->
+                    <form action="/auth/facebook" method="POST">
+                      <button type="submit" class="button active"><span class="fa fa-facebook"></span> Facebook</button>
+                    </form>
+                  </div>
+                  <div class="col-33">
+                    <!-- <a href="/auth/google" class="button button-cancel"><span class="fa fa-google-plus"></span> Google+</a> -->
+                    <form action="/auth/google" method="POST">
+                      <button type="submit" class="button button-cancel"><span class="fa fa-google-plus"></span> Google+</button>
+                    </form>
+                  </div>
+                  <div class="col-33">
+                    <!-- <a href="/auth/twitter" class="button button-submit"><span class="fa fa-twitter"></span> Twitter</a> -->
+                    <form action="/auth/twitter" method="POST">
+                      <button type="submit" class="button button-submit"><span class="fa fa-twitter"></span> Twitter</button>
+                    </form>
+                  </div>
+                </div>
+                </div>
+                </div>
+                </div>
+              <div class="list-block">
+                <ul>
+
+                  <!-- <li><a href="messages.html" class="close-panel item-link">
+                        <div class="item-content">
+                          <div class="item-media"><i class="icon icon-f7"></i></div>
+                          <div class="item-inner">
+                            <div class="item-title">Messages</div>
+                          </div>
+                        </div>
+                        </a></li> -->
+
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <!-- <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div> -->
+      </div>
+    </div>
+
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="/js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="/js/my-app.js"></script>
+</body>
+</html>
